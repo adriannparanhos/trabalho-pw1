@@ -1,0 +1,142 @@
+/* Estilos para o formulário de professores */
+#cabecalho {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center; 
+}
+
+.table-wrapper {
+max-height: 550px; 
+overflow-y: auto; 
+}
+
+
+#titulo {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+#cabecalho ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+#cabecalho li {
+    margin: 0 10px; 
+}
+
+#cabecalho li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#cabecalho li a:hover {
+    background-color: #111;
+}
+
+#form-professores {
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+#form-professores label {
+    display: block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px ;
+}
+
+#form-professores input,
+#form-professores textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px; ;
+}
+
+#form-professores #sexo {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    padding-inline-start: 1px;
+    cursor: default;
+    overflow: hidden;
+    padding: 1px 2px;
+    border: 2px solid black;
+}
+
+#form-professores input::placeholder {
+    color: #ccc;
+}
+
+
+#form-professores button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #b8cbcf;
+    background-color: #372994;
+    cursor: pointer;
+}
+
+#form-professores button:hover {
+    background-color: #b8cbcf;
+    color: #372994;
+}
+
+#conteudo #formulario {
+    border: #333 1px solid;
+    border-radius: 5px;
+    display: flex;
+}
+
+#tabela {
+    border-left: #372994 1px solid;
+    margin-top: 10px;
+}
+
+
+/* Estilos para a tabela de professores */
+#tabela-professores {
+    width: 800px;
+    border-collapse: collapse;
+    float: left;
+    margin-right: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px ;
+    border-radius: 20px; ;
+
+}
+
+#tabela-professores th,
+#tabela-professores td {
+    padding: 5px;
+    border-bottom: 1px solid #372994;
+}
+
+#tabela-professores th {
+    background-color: #b8cbcf;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+#tabela-professores tbody tr:hover {
+    background-color: #f9f9f9;
+}

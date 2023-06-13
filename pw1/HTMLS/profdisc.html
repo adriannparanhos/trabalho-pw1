@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ESTILOS/profdisc.css">
+    <script src="../SCRIPTS/profdisc.js"></script>
+    <title>Pagina de prof-disciplina</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <div>
+            <ul>
+                <li><a href="professores.html">Pagina de professores</a></li>
+                <li><a href="disciplina.html">Pagina de disciplinas</a></li>
+                <li><a href="profdisc.html">Pagina de professores-profdisc</a></li>
+                <li><a href="relatorios.html">Relatorios</a></li>
+                <li><a href="#" onclick="sair()">sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <h1 id="titulo">Cadastro de Prof - Disc</h1>
+    <div id="conteudo">
+        <div id = formulario>
+            <form id="form-profdisc">
+                <label for="rgprof">RG - Professor:</label>
+                    <input type="text" id="rgprof" name="rfprof" placeholder="Informe o resgistro do professor">
+                
+                    <label for="sigla">Sigla:</label>
+                    <input type="text" id="sigla" name="sigla" placeholder="Informe a sigla da disciplina">
+                
+                    <label for="disciplina">Disciplina:</label>
+                    <textarea id="disciplina" name="disciplina" placeholder="Informe as disciplinas...
+Ex: Matematica
+    Fisica
+    Ingles"></textarea>
+                
+                    <label for="ano">Ano:</label>
+                    <input type="number" id="ano" name="ano" placeholder="Informe o ano escolar.
+    Ex: 2023">
+                
+                    <label for="semestre">Semestre:</label>
+                    <input type="number" id="semestre" name="semestre" placeholder="Informe o semestre...
+    Ex: 1º Semestre">
+        
+                    <label for="diasSemana">diasSemana:</label>
+                    <select id="diasSemana" name="diasSemana" required>
+                        <option value="#">Selecione</option>
+                        <option value="segunda">Segunda</option>
+                        <option value="terca">Terça</option>
+                        <option value="quarta">Quarta</option>
+                        <option value="quinta">Quinta</option>
+                        <option value="sexta">Sexta</option>
+                    </select>
+        
+                    <label for="horario">Horario de inicio</label>
+                    <input type="hour" id="horario" name="horario" placeholder="Informe o horario da aula...
+    Ex: 09:30 a 10:30">
+        
+                <button type="button" id="incluir" onclick="incluirProfDisc()">Incluir</button>
+                <button type="button" id="alterar" onclick="alterarProfDisc()">Alterar</button>
+                <button type="button" id="excluir" onclick="excluirProfDisc()">Excluir</button>
+                <button type="button" id="listar-um" onclick="listarProfDisc()">Listar um</button>
+                <button type="button" id="listar-todos" onclick="listarTodosProfDisc()" >Listar todos</button>
+                <button type="button" id="preencher" onclick="preencherCampos()">Preencher para teste</button>
+            </form>
+            <div id="tabela" class="table-wrapper ">
+                <table id="tabela-profdisc">
+                    <thead>
+                        <tr>
+                            <th>RG - Professor</th>
+                            <th>Sigla</th>
+                            <th>Disciplina</th>
+                            <th>Ano</th>
+                            <th>Semestre</th>
+                            <th>Dia - Semana</th>
+                            <th>Horario de inicio</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', preencherTabelaStorage);
+    </script>
+</body>
+</html>

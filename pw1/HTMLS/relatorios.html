@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ESTILOS/disciplina.css">
+    <link rel="stylesheet" href="../SCRIPTS/disciplina.js">
+    <script src="../SCRIPTS/relatorio.js"></script>
+    <title>Pagina de disciplinas</title>
+    
+</head>
+<body>
+    <header id="cabecalho">
+        <div>
+            <ul>
+                <li><a href="professores.html">Pagina de professores</a></li>
+                <li><a href="disciplina.html">Pagina de disciplinas</a></li>
+                <li><a href="profdisc.html">Pagina de professores-disciplinas</a></li>
+                <li><a href="relatorios.html">Relatorios</a></li>
+                <li><a href="#" onclick="sair()">sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <h1 id="titulo">Relatorios</h1>
+    <!--    A Página Relatórios deverá ter uma opção para cada um dos relatórios solicitados.
+    Relatórios:
+    a) Mostrar todos os dados de todos os professores que possuem mais do que
+    X e-mails, sendo X fornecido pelo usuário;
+    b) Mostrar todos os dados de todas as disciplinas que possuem um
+    determinado livro X em sua bibliografia, sendo X fornecido pelo usuário;
+    c) Mostrar o RF do Professor, o nome do professor, a Sigla da disciplina, o
+    nome da disciplina e todos os demais atributos do relacionamento
+    Professor-Disciplina para aquelas disciplinas que serão ministradas às
+    terças e às quintas feiras de cada semana.-->
+
+    <div id="conteudo">
+        <div id = formulario>
+            <form id="form-disciplinas">
+                <label for="dados-emails">Mostrar dados dos professores pelo email:</label>
+                <input type="text" placeholder="Informe a quantidade de emails" id="dados-emails">
+        
+                <label for="dados-livros">Mostrar dados das disciplinas pelo livro:</label>
+                <input type="text" placeholder="Informe o livro" id="dados-livros">
+
+                <label for="dados-dias">Mostrar dados das disciplinas pelo dia:</label>
+                <select name="dias" id="dados-dia" style="width: 400px; border-radius: 5px;">
+                    <option value="#">Selecione o dia</option>
+                    <option value="terca">Terça</option>
+                    <option value="quinta">Quinta</option>
+                </select><br><br>
+
+                <button type="button" id="btn-dados-emails" onclick="mostrarDadosProfessores()">Mostrar dados dos professores</button>
+                <button type="button" id="btn-dados-livros" onclick="mostrarDadosDisciplina()">Mostrar dados das disciplinas</button>
+                <button type="button" id="btn-dados-dias" onclick="mostrardiscdia()">Mostrar dados das disciplinas</button>
+
+
+                <!--construir a tabela dinamicamente apos clicar em algum botao-->
+            </form>
+            <div id="tabela" class="table-wrapper ">
+                <table id="tabela-disciplinas">
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

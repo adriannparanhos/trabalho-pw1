@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ESTILOS/disciplina.css">
+    <link rel="stylesheet" href="../SCRIPTS/disciplina.js">
+    <script src="../SCRIPTS/disciplina.js"></script>
+    <title>Pagina de disciplinas</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <div>
+            <ul>
+                <li><a href="professores.html">Pagina de professores</a></li>
+                <li><a href="disciplina.html">Pagina de disciplinas</a></li>
+                <li><a href="profdisc.html">Pagina de professores-disciplinas</a></li>
+                <li><a href="relatorios.html">Relatorios</a></li>
+                <li><a href="#" onclick="sair()">sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <h1 id="titulo">Cadastro de Disciplinas</h1>
+    <div id="conteudo">
+        <div id = formulario>
+            <form id="form-disciplinas">
+                <label for="sigla">Sigla:</label>
+                <input type="text" placeholder="Insira a sigla da disciplina" id="sigla" required>
+        
+                <label for="nome">Nome:</label>
+                <input type="text" placeholder="Insira o nome da disciplina" id="nome" required>
+        
+                <label for="ementa">Ementa:</label>
+                <textarea id="ementa" placeholder="Insira a ementa da disciplina" rows="4" required></textarea>
+        
+                <label for="livros">Livros/Bibliografia:</label>
+                <textarea id="livros" placeholder="Insira os livros usados na disciplina" rows="4" required></textarea>
+        
+                <label for="creditos">Número de Créditos:</label>
+                <input type="number" placeholder="Insira o num. de creditos" id="creditos" required>
+        
+                <label for="carga-horaria">Carga Horária:</label>
+                <input type="number" placeholder="insira a carga horária" id="carga-horaria" required>
+        
+                <button type="button" id="incluir" onclick="incluirDisciplina()">Incluir</button>
+                <button type="button" id="alterar" onclick="alterarDisciplina()">Alterar</button>
+                <button type="button" id="excluir" onclick="excluirDisciplina()">Excluir</button>
+                <button type="button" id="listar-um" onclick="listarDisciplina()">Listar um</button>
+                <button type="button" id="listar-todos" onclick="listarTodasDisciplinas()" >Listar todos</button>
+                <button type="button" id="preencher" onclick="preencherCampos()">Preencher para teste</button>
+                <button type="button" onclick="salvarJSON()">Salvar JSON</button>
+            </form>
+            <div id="tabela" class="table-wrapper ">
+                <table id="tabela-disciplinas">
+                    <thead>
+                        <tr>
+                            <th>Sigla</th>
+                            <th>Nome</th>
+                            <th>Ementa</th>
+                            <th>Livros/Bibliografia</th>
+                            <th>Número de Créditos</th>
+                            <th>Carga Horária</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+      
+    <script>
+        window.addEventListener('DOMContentLoaded', preencherTabelaStorage);
+    </script>
+      
+</html>
